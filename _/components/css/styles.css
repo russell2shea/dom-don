@@ -1,457 +1,94 @@
+/*
+  @mixin bgColor($colorofbg){
+    background-color: $colorofbg;
+    @if $colorofbg == $orange or $green{
+      color: $white;
+    }
+  }
+  */
+* {
+  padding: 0;
+  margin: 0; }
+
 body {
-  background: #fff;
-  text-align: left;
-  font-family: "Montserrat", sans-serif; }
+  background: #13213F; }
 
-body p, body, h3, li {
-  font-family: "Montserrat", sans-serif; }
+img {
+  max-width: 100%; }
 
-p, li {
-  font-size: 1.1rem; }
+p {
+  font-family: "Cardo", serif;
+  color: #666664;
+  font-size: 20px; }
 
-.inner-wrapper {
-  margin: 0 auto;
-  max-width: 950px; }
+h1, h2, h3 {
+  font-family: "Cardo", serif;
+  text-align: center;
+  font-weight: 400; }
 
-.outer-wrapper {
-  max-width: 1100px;
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 20px; }
+  h1 span.ampersan {
+    color: #C54699; }
+
+h3 {
+  font-size: 30px; }
+
+h4 {
+  color: #C54699;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+a {
+  color: #4D84C4; }
+
+.contentWrapper {
+  max-width: 1029px;
+  display: block;
   margin: 0 auto; }
 
-.sidePad {
-  padding: 0px 20px 0px 20px; }
-
-.responsiveImg {
-  width: 100%; }
-
-.orangeBar {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background-color: #f16f20;
-  color: #fff;
-  margin-left: -100%; }
-  .orangeBar--position {
-    margin-left: 50%; }
-  .orangeBar h3 {
-    margin-top: 0px;
-    margin-bottom: 0px; }
-
-.yellow {
-  background: #face1e;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+.centerThis {
   margin: 0 auto;
-  border: 1px solid #503326;
-  width: 70%;
-  font-size: 1.5rem;
-  font-weight: 900;
   display: block;
-  max-width: 350px; }
-
-.yellowA {
-  color: #503326;
-  text-decoration: none;
-  -webkit-transition: 0.7s ease-in-out;
-  -o-transition: 0.7s ease-in-out;
-  transition: 0.7s ease-in-out; }
-  .yellowA:hover {
-    color: #fff; }
-
-/*  Headline Section */
-.Headlinesect {
-  background: url("https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RLL/Trump_Social_Security_Compliant/RLL_TrumpSocialSecurity_Background_Image.png") center -250px no-repeat;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  padding-top: 0px;
-  padding-bottom: 2em; }
-
-.headline--arrow {
-  background: rgba(7, 71, 66, 0.45);
-  padding-top: 2em;
-  padding-bottom: 2em; }
-  .headline--arrow h1 {
-    margin-top: 0px;
-    padding-top: 0px;
-    color: #fff;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    text-shadow: 0px 3px 3px #999; }
-
-.hidebr {
-  display: none; }
-
-.headlinebr {
-  display: none; }
-
-.bigger {
-  font-weight: 900; }
-
-.desclaimer {
-  font-size: 14px;
-  text-align: center;
-  margin: 0 12px; }
-
-.deck p {
-  font-weight: bold;
-  color: #503326;
   text-align: center; }
 
-.arrow-down {
-  position: relative;
-  z-index: 2;
-  width: 800px;
-  height: auto;
-  bottom: auto;
-  margin: 0 auto;
-  display: block;
-  border: 180px solid;
-  border-color: #D7F6F3 transparent  transparent  transparent; }
+.content {
+  background: #F4F4F1;
+  padding: 20px; }
 
-/*  / Headline Section */
-/*  Nilus Section */
-.nilus {
-  background: rgba(173, 219, 216, 0.9);
-  font-weight: bold;
-  color: #503326;
-  margin-top: 0px;
-  margin-bottom: 2em; }
-
-.enlarge {
-  font-size: 2rem; }
-
-/*  Nilus Section */
-/*  kit Section */
-.kit {
-  background: rgba(7, 160, 148, 0.2);
-  font-weight: bold;
-  color: #503326;
-  padding-top: 0px;
-  padding-bottom: 2em;
-  margin-top: 0px;
-  margin-bottom: 2em; }
-
-.changes {
-  max-width: 600px; }
-
-.circleCheck {
-  width: 80%;
-  margin: 0 auto; }
-
-.circleCheck p:before {
-  content: '';
-  background: url(https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RLL/Trump_Social_Security_Compliant/RLL_TrumpSocialSecurity_Checkmark.png) 0 0 no-repeat;
-  display: block;
-  width: 30px;
-  height: 40px;
-  margin: 0 0 -38px -45px; }
-
-.kit h3 {
-  text-align: left; }
-
-/*  kit Section */
-/*  test Section */
-.testSection {
-  background: #D7F6F3;
-  color: #503326;
-  padding-top: 0px;
-  padding-bottom: 2em;
-  margin-top: 0px;
-  margin-bottom: 2em; }
-
-.testSection img {
-  border-radius: 100%;
-  border: 5px #f16f20 solid;
-  width: 100%;
-  max-width: 110px;
-  margin: 0 auto;
-  display: block; }
-
-.test, .test__left {
-  margin: 0 auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  width: 100%;
-  max-width: 80%;
-  display: block; }
-  .test--cite, .test__left--cite {
-    background-color: #093D3A;
-    color: #fff;
-    max-width: 265px;
-    padding-top: 2px;
-    padding-bottom: 2px; }
-  .test--quote, .test__left--quote {
-    border: solid 3px #f16f20;
-    font-weight: bold;
-    width: 100%; }
-
-/*  /test Section */
-/*  letter Section */
-.bottomimg {
-  width: 100%;
-  max-width: 380px; }
-
-.letter {
-  font-weight: bold;
-  color: #503326;
-  padding-top: 2em;
+.nav {
+  margin-left: -20px;
+  position: fixed;
+  bottom: 0px;
+  background: #CAC7C2;
+  padding-top: 10px;
   padding-bottom: 0px;
-  background: #fff;
-  background: url("https://d13p2xj50zkyqm.cloudfront.net/promos_1/AF/RLL/Trump_Social_Security_Compliant/RLL_TrumpSocialSecurity_Background_Imageupsidedown.jpg") center -60% no-repeat;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover; }
-
-/*  /letter Section */
-footer {
-  background: rgba(7, 71, 66, 0.45);
-  color: #fff;
-  text-align: center;
-  margin-top: 50px;
-  padding-top: 3em;
-  padding-bottom: 12em; }
-  footer p {
-    font-size: 0.8rem;
-    max-width: 700px;
-    margin: 0 auto; }
-
-.arrow {
-  text-align: center;
-  margin: 0 auto;
-  padding: 0.47222em 0; }
-
-.arrow svg {
   width: 100%;
-  height: 40px; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-.redArrowBar {
-  fill: rgba(7, 71, 66, 0.45); }
-
-.displaybr {
-  display: block; }
-
-.footer-copyright, .footer_copyright {
-  margin: 2em auto;
-  text-align: left;
-  max-width: 900px; }
-
-.mobileCenter {
-  margin: 0 auto;
-  display: block;
-  text-align: center; }
-
-#privacypolicy a {
-  text-decoration: underline;
-  color: #ffffff;
-  cursor: pointer; }
-
-.footer_copyright {
-  display: none; }
-
-@media screen and (min-width: 400px) {
-  footer {
-    padding-bottom: 2em; } }
-
-@media screen and (min-width: 640px) {
-  h3 {
-    font-size: 2rem; }
-  p, li {
-    font-size: 1rem; }
-  .loophole {
-    margin-top: -40px; }
-  .orangeBar {
-    margin-left: -100%;
-    margin-right: 40%;
-    position: relative;
-    z-index: 2; }
-    .orangeBar--position {
-      margin-left: 63.5%; }
-    .orangeBar h3 {
-      margin-left: 0px;
-      text-align: left; }
-  .nilus {
-    margin-top: -40px;
-    padding-top: 200px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    background: url("https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RLL/Trump_Social_Security_Compliant/RLL_TrumpSocialSecurity_Nilus.jpg") 40% 0% no-repeat;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover; }
-  .blueBox {
-    background: rgba(173, 219, 216, 0.9);
-    margin-top: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .showbr {
+  z-index: 100; }
+  .nav_block-links {
     display: none; }
-  .kit {
-    margin-top: -40px;
-    padding-top: 50px; }
-  .testSection {
-    margin-top: -60px;
-    padding-top: 70px; }
-  .circleCheck {
-    width: 70%; }
-  .testSection img {
-    margin-top: 60px; }
-  .test {
-    max-width: none;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 2em; }
-    .test:before {
-      content: ' ';
-      position: absolute;
-      width: 0;
-      height: 0;
-      left: auto;
-      right: -27px;
-      top: 95px;
-      bottom: auto;
-      border: 22px solid;
-      border-color: transparent transparent transparent #f16f20; }
-    .test:after {
-      content: ' ';
-      position: absolute;
-      width: 0;
-      height: 0;
-      left: auto;
-      right: -22px;
-      top: 95px;
-      bottom: auto;
-      border: 22px solid;
-      border-color: transparent transparent transparent #D7F6F3; }
-  .image--left:before {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: auto;
-    right: -30.5%;
-    top: 95px;
-    bottom: auto;
-    border: 22px solid;
-    border-color: transparent #f16f20 transparent transparent; }
-  .image--left:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: auto;
-    right: -32.5%;
-    top: 95px;
-    bottom: auto;
-    border: 22px solid;
-    border-color: transparent #D7F6F3 transparent transparent; }
-  .test__left .test--cite {
-    margin-left: 10%; }
-  .headline--arrow {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 67px;
-    position: relative;
-    z-index: 2; }
-  .Headlinesect {
-    margin-top: -300px;
-    padding-top: 200px; }
-  .headline--arrow {
-    padding-top: 0.1em;
-    padding-bottom: 0.1em; }
-  .headline--arrow h1 {
-    font-size: 2rem; }
-  .headlinebr {
-    display: block; }
-  .desWrap {
-    margin: 0 auto;
-    display: block;
-    max-width: 750px; }
-  .deck {
-    margin: 0 auto;
-    display: block;
-    max-width: 750px; }
-  .deck p {
-    font-size: 1.4rem; }
-  .moveVid {
-    margin-top: 130px; }
-  .loophole .medium-4 {
-    height: 1000px; } }
 
-@media screen and (min-width: 683px) {
-  .test__left .test--cite {
-    margin-left: 20%; }
-  .loophole .medium-4 {
-    height: 900px; } }
+img.headline {
+  border: solid 5px #CAC7C2;
+  margin-top: 30px;
+  margin-bottom: 30px; }
 
-@media screen and (min-width: 750px) {
-  .nilus {
-    background-position: 50% 0%; }
-  .image--left:before {
-    right: -29.5%; }
-  .image--left:after {
-    right: -31.5%; }
-  .loophole .medium-4 {
-    height: 800px; } }
-
-@media screen and (min-width: 761px) {
-  .test__left .test--cite {
-    margin-left: 25%; } }
-
-@media screen and (min-width: 790px) {
-  .test__left .test--cite {
-    margin-left: 30%; } }
-
-@media screen and (min-width: 800px) {
-  .nilus {
-    background-position: 60% 0%; } }
-
-@media screen and (min-width: 863px) {
-  .test__left .test--cite {
-    margin-left: 35%; } }
-
-@media screen and (min-width: 900px) {
-  .nilus {
-    background-position: center 0%; }
-  .loophole .medium-4 {
-    height: 700px; } }
-
-@media screen and (min-width: 926px) {
-  .test__left .test--cite {
-    margin-left: 40%; } }
-
-@media screen and (min-width: 1024px) {
-  p, li {
-    font-size: 1.1rem; }
-  .sidePad {
-    padding: 0px 20px 0px 20px; }
-  .nilus {
-    margin-top: -40px;
-    padding-top: 200px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    background: url("https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RLL/Trump_Social_Security_Compliant/RLL_TrumpSocialSecurity_Nilus.jpg") center 0% no-repeat; }
-  .blueBox {
-    background: rgba(173, 219, 216, 0.9);
-    margin-top: 80px;
-    margin-left: 80px;
-    margin-right: -60px;
-    margin-bottom: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .testSection img {
-    margin-top: 60px;
-    max-width: 140px; }
-  .test__left .test--cite {
-    margin-left: 160px; }
-  .test, .test__left {
-    margin-top: 2em;
-    margin-bottom: 2em; } }
+.details {
+  border: solid 2px #CCC7C2;
+  background: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .details p {
+    color: #000000;
+    padding-bottom: 20px; }
+  .details_story {
+    border-bottom: 2px solid #CCC7C2;
+    margin-bottom: 20px; }
+  .details_wedding {
+    border-bottom: 2px solid #CCC7C2;
+    margin-bottom: 20px; }
