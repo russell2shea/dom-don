@@ -20,7 +20,7 @@ function scss(done){
   .pipe(sass({outputStyle:'compressed'}))
   .pipe(rename('styles.css'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('_css/'))
+  .pipe(gulp.dest('css/'))
   .pipe(browsersync.stream());
   done();
 }
