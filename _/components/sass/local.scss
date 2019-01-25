@@ -46,36 +46,39 @@
   img{
     max-width: 100%;
   }
-  p{
-    font-family: $serif;
-    color: $grey;
-    font-size: 20px;
+  .content {
+    & p{
+        font-family: $serif;
+        color: $grey;
+        font-size: 20px;
+      }
+      & h1, h2, h3{
+        font-family: $serif;
+        text-align: center;
+        font-weight: 400;
+      }
+      & h1{
+        font-size: 40px;
+        line-height: 40px;
+        @include martopbot(20px, 20px);
+        & span.ampersan{
+         color: $pink;
+        }
+      }
+      & h3{
+        font-size: 30px;
+      }
+      & h4{
+        color: $pink;
+        font-size: 20px;
+        font-family: $sansSerif;
+        @include martopbot(20px, 20px);
+      }
+      & a{
+        color: $blue-light;
+      }
   }
-  h1, h2, h3{
-    font-family: $serif;
-    text-align: center;
-    font-weight: 400;
-  }
-  h1{
-    font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 20px;
-    & span.ampersan{
-     color: $pink;
-    }
-  }
-  h3{
-    font-size: 30px;
-  }
-  h4{
-    color: $pink;
-    font-size: 20px;
-    font-family: $sansSerif;
-    @include martopbot(20px, 20px);
-  }
-  a{
-    color: $blue-light;
-  }
+
   .contentWrapper{
     max-width: 1029px;
     display: block;
@@ -86,6 +89,10 @@
     display: block;
     text-align: center;
   }
+  .floatRight{
+    float: right;
+  }
+
 
 // Sections
   .content{
@@ -111,27 +118,57 @@
   img.headline{
     border: solid 5px $grey-medium;
     @include martopbot(30px, 30px);
+      width: 95%;
+      max-width: 900px;
   }
 
   .details{
     border: solid 2px $grey-border;
     background: $white;
+    max-width: 880px;
+    margin: 0 auto;
+    @include martopbot(45px, 30px);
     padding: 20px;
-    @include martopbot(30px, 30px);
+    & a{
+      font-weight: bold;
+    }
     & p{
       color: $black;
-      padding-bottom: 20px;
+      @include martopbot(20px, 20px);
+    }
+    & h4{
+      margin-bottom: 0px;
     }
     & .header{
-
+      margin-top: -45px;
     }
     &_story{
       border-bottom: 2px solid $grey-border;
       margin-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     &_wedding{
       border-bottom: 2px solid $grey-border;
       margin-bottom: 20px;
+       padding-left: 10px;
+      padding-right: 10px;
+      &-bottomimg{
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+      }
     }
-    &_hotel{}
+    &_hotel{
+      padding-left: 10px;
+      padding-right: 10px;
+      & p.details_hotel-header{
+        font-weight: bold;
+        margin-bottom: -20px;
+      }
+      & p.floatRight-higher{
+        margin-top: 0px;
+      }
+    }
   }

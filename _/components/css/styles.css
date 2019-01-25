@@ -16,34 +16,35 @@ body {
 img {
   max-width: 100%; }
 
-p {
+.content p {
   font-family: "Cardo", serif;
   color: #666664;
   font-size: 20px; }
 
-h1, h2, h3 {
+.content h1, .content h2, .content h3 {
   font-family: "Cardo", serif;
   text-align: center;
   font-weight: 400; }
 
-h1 {
+.content h1 {
   font-size: 40px;
   line-height: 40px;
+  margin-top: 20px;
   margin-bottom: 20px; }
-  h1 span.ampersan {
+  .content h1 span.ampersan {
     color: #C54699; }
 
-h3 {
+.content h3 {
   font-size: 30px; }
 
-h4 {
+.content h4 {
   color: #C54699;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   margin-top: 20px;
   margin-bottom: 20px; }
 
-a {
+.content a {
   color: #4D84C4; }
 
 .contentWrapper {
@@ -55,6 +56,9 @@ a {
   margin: 0 auto;
   display: block;
   text-align: center; }
+
+.floatRight {
+  float: right; }
 
 .content {
   background: #F4F4F1;
@@ -75,20 +79,113 @@ a {
 img.headline {
   border: solid 5px #CAC7C2;
   margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  width: 95%;
+  max-width: 900px; }
 
 .details {
   border: solid 2px #CCC7C2;
   background: #fff;
-  padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 30px; }
+  max-width: 880px;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: 30px;
+  padding: 20px; }
+  .details a {
+    font-weight: bold; }
   .details p {
     color: #000000;
-    padding-bottom: 20px; }
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .details h4 {
+    margin-bottom: 0px; }
+  .details .header {
+    margin-top: -45px; }
   .details_story {
     border-bottom: 2px solid #CCC7C2;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px; }
   .details_wedding {
     border-bottom: 2px solid #CCC7C2;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .details_wedding-bottomimg {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 40px;
+      margin-top: 10px; }
+  .details_hotel {
+    padding-left: 10px;
+    padding-right: 10px; }
+    .details_hotel p.details_hotel-header {
+      font-weight: bold;
+      margin-bottom: -20px; }
+    .details_hotel p.floatRight-higher {
+      margin-top: 0px; }
+
+@media only screen and (min-width: 550px) {
+  .centerThis-medium {
+    text-align: center; } }
+
+@media only screen and (min-width: 720px) {
+  .content p {
+    font-size: 17px; }
+  .nav {
+    position: relative;
+    bottom: auto;
+    background: none;
+    border-bottom: 5px solid #CAC7C2;
+    border-top: 5px solid #CAC7C2;
+    max-width: 915px;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 0px; }
+    .nav_block {
+      border-top: 2px solid #CCC7C2;
+      border-bottom: 2px solid #CCC7C2; }
+      .nav_block-links {
+        display: grid;
+        grid-auto-flow: column; }
+        .nav_block-links p {
+          font-family: "Montserrat", sans-serif;
+          text-align: center;
+          text-transform: uppercase;
+          margin-top: 12px;
+          margin-bottom: 12px; }
+          .nav_block-links p:first-of-type {
+            text-align: left; }
+      .nav_block h2, .nav_block button {
+        display: none; }
+  h1 {
+    font-size: 43px; }
+  img.headline {
+    border: solid 10px #CAC7C2;
+    margin-bottom: 40px; } }
+
+@media only screen and (min-width: 800px) {
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.1fr;
+    margin-top: 50px; }
+    .details_story {
+      border-bottom: none;
+      padding-right: 20px; }
+    .details_wedding {
+      border-left: 2px solid #CCC7C2;
+      border-right: 2px solid #CCC7C2;
+      border-bottom: none;
+      padding-left: 20px;
+      padding-right: 20px; }
+    .details_hotel {
+      padding-left: 30px; } }
+
+@media only screen and (min-width: 1060px) {
+  body {
+    margin-top: 50px;
+    margin-bottom: 50px; } }
