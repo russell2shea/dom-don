@@ -1,11 +1,8 @@
-/*
-  @mixin bgColor($colorofbg){
-    background-color: $colorofbg;
-    @if $colorofbg == $orange or $green{
-      color: $white;
-    }
-  }
-  */
+.nav_block-links p, .nav_block-links p:hover, .registry_icons-links, .registry_icons-links:hover, .registry_icons-links:active, .contact_form input, .contact_form textarea, .contact_form input:focus, .contact_form textarea:focus, .contact_form-submit, .contact_form-submit:hover {
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+
 * {
   padding: 0;
   margin: 0; }
@@ -16,35 +13,35 @@ body {
 img {
   max-width: 100%; }
 
-.content p {
+.contentWrapper p {
   font-family: "Cardo", serif;
   color: #666664;
   font-size: 20px; }
 
-.content h1, .content h2, .content h3 {
+.contentWrapper h1, .contentWrapper h2, .contentWrapper h3 {
   font-family: "Cardo", serif;
   text-align: center;
   font-weight: 400; }
 
-.content h1 {
+.contentWrapper h1 {
   font-size: 40px;
   line-height: 40px;
   margin-top: 20px;
   margin-bottom: 20px; }
-  .content h1 span.ampersan {
+  .contentWrapper h1 span.ampersan {
     color: #C54699; }
 
-.content h3 {
+.contentWrapper h3 {
   font-size: 30px; }
 
-.content h4 {
+.contentWrapper h4 {
   color: #C54699;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.content a {
+.contentWrapper a {
   color: #4D84C4; }
 
 .contentWrapper {
@@ -72,9 +69,16 @@ img {
   padding-top: 10px;
   padding-bottom: 0px;
   width: 100%;
-  z-index: 100; }
+  z-index: 100;
+  border-top: 1px solid #13213F; }
   .nav_block-links {
     display: none; }
+    .nav_block-links p {
+      cursor: pointer; }
+      .nav_block-links p:hover {
+        color: #C54699;
+        border-left: 2px solid #13213F;
+        border-right: 2px solid #13213F; }
 
 img.headline {
   border: solid 5px #CAC7C2;
@@ -89,7 +93,7 @@ img.headline {
   max-width: 880px;
   margin: 0 auto;
   margin-top: 45px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   padding: 20px; }
   .details a {
     font-weight: bold; }
@@ -125,13 +129,69 @@ img.headline {
     .details_hotel p.floatRight-higher {
       margin-top: 0px; }
 
+.registry_icons {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: auto auto; }
+  .registry_icons-links {
+    border-radius: 50%;
+    border: solid 7px #CCC7C2;
+    max-width: 150px; }
+    .registry_icons-links:hover {
+      border: solid 7px #C54699;
+      border-bottom: solid 10px #b83a8c; }
+    .registry_icons-links:active {
+      border: solid 7px #C54699;
+      border-bottom: solid 10px #b83a8c; }
+
+.contact {
+  background: #CAC7C2;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .contact_form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 900px; }
+    .contact_form input, .contact_form textarea {
+      font-size: 17px;
+      padding: 20px;
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      max-width: 400px;
+      margin-top: 40px;
+      font-family: "Montserrat", sans-serif; }
+      .contact_form input:focus, .contact_form textarea:focus {
+        outline: solid 2px #C54699; }
+    .contact_form input:first-of-type {
+      margin-top: 0px; }
+    .contact_form-submit {
+      background: #C54699;
+      color: #fff;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 25px 10px 25px;
+      border-radius: 10px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      cursor: pointer; }
+      .contact_form-submit:hover {
+        border-bottom: 2px solid #13213F; }
+  .contact p.toTop {
+    display: none;
+    color: #4D84C4;
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: center; }
+
 @media only screen and (min-width: 550px) {
   .centerThis-medium {
     text-align: center; } }
 
 @media only screen and (min-width: 720px) {
-  .content p {
-    font-size: 17px; }
   .nav {
     position: relative;
     bottom: auto;
@@ -159,14 +219,19 @@ img.headline {
           margin-top: 12px;
           margin-bottom: 12px; }
           .nav_block-links p:first-of-type {
-            text-align: left; }
+            text-align: left;
+            border-left: none; }
       .nav_block h2, .nav_block button {
         display: none; }
   h1 {
     font-size: 43px; }
+  .details p {
+    font-size: 17px; }
   img.headline {
     border: solid 10px #CAC7C2;
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+  .registry_icons-links {
+    max-width: 100%; } }
 
 @media only screen and (min-width: 800px) {
   .details {

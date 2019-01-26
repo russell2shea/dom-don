@@ -15,15 +15,6 @@
 
 //minIns
  
-  /*
-  @mixin bgColor($colorofbg){
-    background-color: $colorofbg;
-    @if $colorofbg == $orange or $green{
-      color: $white;
-    }
-  }
-  */
-
   // Adjust top and bottom padding 
   @mixin padtopbot($padtop, $padbot){
     padding-top: $padtop;
@@ -34,6 +25,12 @@
   @mixin martopbot($martop, $marbot){
     margin-top: $martop;
     margin-bottom: $marbot;
+  }
+  %ease{
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
   }
 
 // Basic Settings
@@ -46,7 +43,7 @@
   img{
     max-width: 100%;
   }
-  .content {
+  .contentWrapper {
     & p{
         font-family: $serif;
         color: $grey;
@@ -108,9 +105,20 @@
     @include padtopbot(10px, 0px);
     width: 100%;
     z-index: 100;
+    border-top: 1px solid $blue-navy;
     &_block{
       &-links{
         display: none;
+        & p{
+          cursor: pointer;
+          @extend %ease;
+           &:hover{
+            @extend %ease;
+            color: $pink;
+            border-left: 2px solid $blue-navy;
+            border-right: 2px solid $blue-navy;
+          }
+        }
       }//-links
     }//_block
   } // nav
@@ -127,7 +135,7 @@
     background: $white;
     max-width: 880px;
     margin: 0 auto;
-    @include martopbot(45px, 30px);
+    @include martopbot(45px, 40px);
     padding: 20px;
     & a{
       font-weight: bold;
@@ -171,4 +179,82 @@
         margin-top: 0px;
       }
     }
+  } // .details
+
+
+.registry{
+  &_icons{
+    @include martopbot(40px, 40px);
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: auto auto;
+    &-links{
+      border-radius: 50%;
+      border: solid 7px $grey-border;
+      @extend %ease;
+      max-width: 150px;
+      &:hover{
+        @extend %ease;
+        border: solid 7px $pink;
+        border-bottom: solid 10px darken($pink, 5%);
+      }
+      &:active{
+        @extend %ease;
+        border: solid 7px $pink;
+        border-bottom: solid 10px darken($pink, 5%);
+      }
+    }
   }
+}// registry
+
+.contact{
+    background: $grey-medium;
+    @include padtopbot(40px, 40px);
+    &_form{
+      @include padtopbot(40px, 40px);
+      max-width: 900px;
+      & input, textarea{
+        font-size: 17px;
+        padding: 20px;
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 400px;
+        margin-top: 40px;
+        font-family: $sansSerif;
+        @extend %ease;
+        &:focus{
+          @extend %ease;
+          outline: solid 2px $pink;
+        }
+      }
+      & input{
+        &:first-of-type{
+          margin-top: 0px;
+        }
+      }
+      &-submit{
+        background: $pink;
+        color: $white;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px 25px 10px 25px;
+        border-radius: 10px;
+        @include martopbot(40px, 20px);
+        @extend %ease;
+        cursor: pointer;
+        &:hover{
+          @extend %ease;
+          border-bottom: 2px solid $blue-navy;
+        }
+      }
+    }
+    & p.toTop{
+      display: none;
+      color: $blue-light;
+      cursor: pointer;
+      text-decoration: underline;
+      text-align: center;
+    }
+}// .contact
