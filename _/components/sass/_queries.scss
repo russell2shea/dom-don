@@ -23,7 +23,10 @@
 	      &-links{
 	        display: grid;
 	    	grid-auto-flow: column;
-	        & p{
+	    	& a{
+	    		text-decoration: none;
+	    	}
+	        & a p{
 	        	font-family: $sansSerif;
 	        	text-align: center;
 	        	text-transform: uppercase;
@@ -85,5 +88,3 @@
  		@include martopbot(50px, 50px);
  	}
  }
-
- 

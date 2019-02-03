@@ -212,13 +212,15 @@ img.headline {
       .nav_block-links {
         display: grid;
         grid-auto-flow: column; }
-        .nav_block-links p {
+        .nav_block-links a {
+          text-decoration: none; }
+        .nav_block-links a p {
           font-family: "Montserrat", sans-serif;
           text-align: center;
           text-transform: uppercase;
           margin-top: 12px;
           margin-bottom: 12px; }
-          .nav_block-links p:first-of-type {
+          .nav_block-links a p:first-of-type {
             text-align: left;
             border-left: none; }
       .nav_block h2, .nav_block button {
