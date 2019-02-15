@@ -374,7 +374,8 @@ img.headline {
       grid-template-rows: 1fr 1fr 1fr;
       grid-template-areas: "row1-c1 row1-c2" "row2-c1 row2-c2" "row3-c1 row3-c2"; }
       .contact_form-wrapper textarea {
-        grid-area: row1-c2 /row2-c2 / row3-c2; }
+        grid-area: row1-c2 /row2-c2 / row3-c2;
+        margin-left: 0px; }
     .contact_form input:first-of-type {
       margin-top: 40px; } }
 

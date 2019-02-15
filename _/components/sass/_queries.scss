@@ -96,8 +96,7 @@
 	        "row3-c1 row3-c2";
 	        & textarea{
 	        	grid-area: row1-c2 /row2-c2 / row3-c2;
-	        	//margin-left: 0px;
-	        	//resize: none;
+	        	margin-left: 0px;
 	        }
 	  	}
 	  	& input:first-of-type{
