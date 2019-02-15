@@ -17,9 +17,13 @@
 	    margin: 0 auto;
 	    @include padtopbot(5px, 5px);
 	    @include martopbot(30px, 0px);
+	    &_icon{
+	    	display: none;
+	    }
 	    &_block{
 	    	border-top: 2px solid $grey-border;
 	    	border-bottom: 2px solid $grey-border;
+	    	display: block;
 	      &-links{
 	        display: grid;
 	    	grid-auto-flow: column;
@@ -31,11 +35,6 @@
 	        	text-align: center;
 	        	text-transform: uppercase;
 	        	@include martopbot(12px, 12px);
-	        	&:first-of-type{
-	        		text-align: left;
-	        		border-left: none;
-	        	}
-
 	        }
 
 	      }//-links
@@ -59,6 +58,9 @@
 	  .registry_icons-links{
 		 max-width: 100%;
  	   }
+ 	   .contact p.toTop{
+ 	   	display: block;
+ 	   }
  }
 
  @media only screen and (min-width: 800px){
@@ -81,6 +83,30 @@
   			padding-left: 30px;
   		}
 	  }
+	  .contact_form{
+	  	padding-top: 0px;
+	  	padding-bottom: 0px;
+	  	&-wrapper{
+		  	display: grid;
+		  	grid-template-columns: 1fr 1fr;
+		  	grid-template-rows: 1fr 1fr 1fr;
+		  	 grid-template-areas:
+	        "row1-c1 row1-c2"
+	        "row2-c1 row2-c2"
+	        "row3-c1 row3-c2";
+	        & textarea{
+	        	grid-area: row1-c2 /row2-c2 / row3-c2;
+	        	//margin-left: 0px;
+	        	//resize: none;
+	        }
+	  	}
+	  	& input:first-of-type{
+	  		margin-top: 40px;
+	  	}
+	  }
+
+	   
+
  }
 
  @media only screen and (min-width: 1060px){

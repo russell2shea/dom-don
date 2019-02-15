@@ -1,3 +1,4 @@
+/*
 // On Submit to let required do the validation
 $( ".contact_form" ).submit(function( event ) {
 
@@ -13,8 +14,9 @@ $( ".contact_form" ).submit(function( event ) {
 	console.log(name + " " + email + " " + phone + " " + message);
 
     $.ajax({
-        url: "https://sites.agorafinancial.com/promos/test/contactUs.php",
-        type: "POST",
+            url : 'https://platinoid-morning.000webhostapp.com',
+       
+            dataTYpe : 'jsonp',        type: "POST",
         data: {
             name: name,
             email: email,
@@ -46,7 +48,59 @@ $( ".contact_form" ).submit(function( event ) {
 
 
 });
+*/
+
+    $('document').ready(function(){
+        $('.contact_form').on('submit',function(e){
+            e.preventDefault(); //prevent default form submition
+            var FormData = $('.contact_form').serialize();
+	var name = $("input[name='name']").val();
+	var email = $("input[name='email']").val();
+	var phone = $("input[name='telephone']").val();
+	var message = $("textarea[name='message']").val();
 
 
+        $.ajax({
+
+            type : 'post',
+            url : 'https://platinoid-morning.000webhostapp.com',
+            data: {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message
+        },
+            dataTYpe : 'jsonp',
+            encode : true,
+            /*
+            beforeSend : function(){
+
+                $('$mybtn').html('<span class="glyphicon glyphicon-repeat fast-right-spinner"></span> Sending');
+            },
+*/
+        /* 
+            success : function(response){
+
+                response = JSON.parse(response);
+
+                if(response== "ok"){
+
+                    $('sendmessage').html('Your message has been sent successfully.');
+                }else{
+
+                    $('errormessage').html(response);
+                }
+
+            }
+
+*/
+
+
+        });
+
+        });
+
+
+    });
 
 

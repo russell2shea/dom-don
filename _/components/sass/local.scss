@@ -97,32 +97,6 @@
     padding: 20px;
   }
 
-  .nav{
-    margin-left: -20px;
-    position: fixed;
-    bottom: 0px;
-    background: $grey-medium;
-    @include padtopbot(10px, 0px);
-    width: 100%;
-    z-index: 100;
-    border-top: 1px solid $blue-navy;
-    &_block{
-      &-links{
-        display: none;
-        & p{
-          cursor: pointer;
-          @extend %ease;
-           &:hover{
-            @extend %ease;
-            color: $pink;
-            border-left: 2px solid $blue-navy;
-            border-right: 2px solid $blue-navy;
-          }
-        }
-      }//-links
-    }//_block
-  } // nav
-
   img.headline{
     border: solid 5px $grey-medium;
     @include martopbot(30px, 30px);
@@ -196,12 +170,12 @@
       &:hover{
         @extend %ease;
         border: solid 7px $pink;
-        border-bottom: solid 10px darken($pink, 5%);
+        border-bottom: solid 7px darken($pink, 10%);
       }
       &:active{
         @extend %ease;
         border: solid 7px $pink;
-        border-bottom: solid 10px darken($pink, 5%);
+        border-bottom: solid 7px darken($pink, 10%);
       }
     }
   }
