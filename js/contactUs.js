@@ -1,4 +1,4 @@
-/*
+
 // On Submit to let required do the validation
 $( ".contact_form" ).submit(function( event ) {
 
