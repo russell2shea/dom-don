@@ -72,7 +72,6 @@ $( ".contact_form" ).submit(function( event ) {
             success : function(response){
             	console.log(response);
                 //response = JSON.parse(response);
-
                 if($('p.success').is(':visible')){
                 	$('p.success').fadeOut();
                 }
