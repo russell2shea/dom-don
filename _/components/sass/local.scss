@@ -232,3 +232,18 @@
       text-align: center;
     }
 }// .contact
+
+p.success{
+  background: #6fdb7c;
+  padding: 10px;
+  color: $black;
+  display: none;
+  margin-bottom: 10px;
+}
+p.fail{
+  background: #d86e6e;
+  padding: 10px;
+  color: $black;
+  display: none;
+  margin-bottom: 10px;
+}

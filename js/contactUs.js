@@ -73,11 +73,18 @@ $( ".contact_form" ).submit(function( event ) {
             	console.log(response);
                 //response = JSON.parse(response);
 
+                if($('p.success').is(':visible')){
+                	$('p.success').fadeOut();
+                }
+                if($('p.fail').is(':visible')){
+                	$('p.fail').fadeOut();
+                }
+
                 if(response== "ok"){
-                	alert('sent');
+                	$('p.success').fadeIn().delay(3000).fadeOut();
                     //$('sendmessage').html('Your message has been sent successfully.');
                 }else{
-                	alert('not sent');
+                	$('p.fail').fadeIn().delay(3000).fadeOut();
                     //$('errormessage').html(response);
                 }
 
