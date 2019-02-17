@@ -1,10 +1,10 @@
-
+/*
 // On Submit to let required do the validation
 $( ".contact_form" ).submit(function( event ) {
 
   	// Prevent page reload 
   	event.preventDefault();
-
+  	console.log('hey');
 	// get values from FORM
 	var name = $("input[name='name']").val();
 	var email = $("input[name='email']").val();
@@ -54,46 +54,36 @@ $( ".contact_form" ).submit(function( event ) {
         $('.contact_form').on('submit',function(e){
             e.preventDefault(); //prevent default form submition
             var FormData = $('.contact_form').serialize();
-	var name = $("input[name='name']").val();
-	var email = $("input[name='email']").val();
-	var phone = $("input[name='telephone']").val();
-	var message = $("textarea[name='message']").val();
-
 
         $.ajax({
 
             type : 'post',
             url : 'https://platinoid-morning.000webhostapp.com',
-            data: {
-            name: name,
-            email: email,
-            phone: phone,
-            message: message
-        },
+            data : FormData,
             dataTYpe : 'jsonp',
             encode : true,
-            /*
+          
             beforeSend : function(){
 
-                $('$mybtn').html('<span class="glyphicon glyphicon-repeat fast-right-spinner"></span> Sending');
+                //$('$mybtn').html('<span class="glyphicon glyphicon-repeat fast-right-spinner"></span> Sending');
             },
-*/
-        /* 
-            success : function(response){
 
-                response = JSON.parse(response);
+      
+            success : function(response){
+            	console.log(response);
+                //response = JSON.parse(response);
 
                 if(response== "ok"){
-
-                    $('sendmessage').html('Your message has been sent successfully.');
+                	alert('sent');
+                    //$('sendmessage').html('Your message has been sent successfully.');
                 }else{
-
-                    $('errormessage').html(response);
+                	alert('not sent');
+                    //$('errormessage').html(response);
                 }
 
             }
 
-*/
+
 
 
         });

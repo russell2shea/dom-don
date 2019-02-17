@@ -6,7 +6,7 @@
       empty($_POST['telephone'])       ||
       empty($_POST['message'])   ||
       !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
+   {     
          echo "No arguments Provided!";
          return false;
    }
@@ -22,10 +22,11 @@
 
    // Compile the email
    $email_subject = "Message From $name";
-   $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+   $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $telephone\n\nMessage:\n$message";
    $headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
    $headers .= "Reply-To: $email";  
    mail($to,$email_subject,$email_body,$headers);
+   echo "ok";
    return true;   
 
-		
+      
