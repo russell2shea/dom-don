@@ -1,1 +1,115 @@
- 
+ @media only screen and (min-width: 550px){
+ 	.centerThis-medium{
+ 		text-align: center;
+ 	}
+ }
+
+ @media only screen and (min-width: 720px){
+	   .nav{
+	    position: relative;
+	    bottom: auto;
+	    background: none;
+	    border-bottom: 5px solid $grey-medium;
+	   	border-top: 5px solid $grey-medium;
+	    max-width: 915px;
+	    margin-left: 0px;
+	    margin-top: 30px;
+	    margin: 0 auto;
+	    @include padtopbot(5px, 5px);
+	    @include martopbot(30px, 0px);
+	    &_icon{
+	    	display: none;
+	    }
+	    &_block{
+	    	border-top: 2px solid $grey-border;
+	    	border-bottom: 2px solid $grey-border;
+	    	display: block;
+	      &-links{
+	        display: grid;
+	    	grid-auto-flow: column;
+	    	& a{
+	    		text-decoration: none;
+	    	}
+	        & a p{
+	        	font-family: $sansSerif;
+	        	text-align: center;
+	        	text-transform: uppercase;
+	        	@include martopbot(12px, 12px);
+	        }
+
+	      }//-links
+	      & h2, button{
+	      	display: none;
+	      }
+	    }//_block
+	  } // nav
+
+	  h1{
+	  	font-size: 43px;
+	  }
+	  .details p{
+	  	font-size: 17px;
+	  }
+
+	  img.headline{
+	  	border: solid 10px $grey-medium;
+	  	margin-bottom: 40px;
+	  }
+	  .registry_icons-links{
+		 max-width: 100%;
+ 	   }
+ 	   .contact p.toTop{
+ 	   	display: block;
+ 	   }
+ }
+
+ @media only screen and (min-width: 800px){
+	  .details{
+	  	display: grid;
+	  	grid-template-columns: 1fr 1.2fr 1.1fr;
+	  	margin-top: 50px;
+	  	&_story{
+	  		border-bottom: none;
+	  		padding-right: 20px;
+	  	}
+	  	&_wedding{
+      		border-left: 2px solid $grey-border;
+      		border-right: 2px solid $grey-border;
+      		border-bottom: none;
+      		padding-left: 20px;
+      		padding-right: 20px;
+  		}
+  		&_hotel{
+  			padding-left: 30px;
+  		}
+	  }
+	  .contact_form{
+	  	padding-top: 0px;
+	  	padding-bottom: 0px;
+	  	&-wrapper{
+		  	display: grid;
+		  	grid-template-columns: 1fr 1fr;
+		  	grid-template-rows: 1fr 1fr 1fr;
+		  	 grid-template-areas:
+	        "row1-c1 row1-c2"
+	        "row2-c1 row2-c2"
+	        "row3-c1 row3-c2";
+	        & textarea{
+	        	grid-area: row1-c2 /row2-c2 / row3-c2;
+	        	margin-left: 0px;
+	        }
+	  	}
+	  	& input:first-of-type{
+	  		margin-top: 40px;
+	  	}
+	  }
+
+	   
+
+ }
+
+ @media only screen and (min-width: 1060px){
+ 	body{
+ 		@include martopbot(50px, 50px);
+ 	}
+ }

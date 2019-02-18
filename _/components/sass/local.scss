@@ -15,15 +15,6 @@
 
 //minIns
  
-  /*
-  @mixin bgColor($colorofbg){
-    background-color: $colorofbg;
-    @if $colorofbg == $orange or $green{
-      color: $white;
-    }
-  }
-  */
-
   // Adjust top and bottom padding 
   @mixin padtopbot($padtop, $padbot){
     padding-top: $padtop;
@@ -34,6 +25,12 @@
   @mixin martopbot($martop, $marbot){
     margin-top: $martop;
     margin-bottom: $marbot;
+  }
+  %ease{
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
   }
 
 // Basic Settings
@@ -46,36 +43,39 @@
   img{
     max-width: 100%;
   }
-  p{
-    font-family: $serif;
-    color: $grey;
-    font-size: 20px;
+  .contentWrapper {
+    & p{
+        font-family: $serif;
+        color: $grey;
+        font-size: 20px;
+      }
+      & h1, h2, h3{
+        font-family: $serif;
+        text-align: center;
+        font-weight: 400;
+      }
+      & h1{
+        font-size: 40px;
+        line-height: 40px;
+        @include martopbot(20px, 20px);
+        & span.ampersan{
+         color: $pink;
+        }
+      }
+      & h3{
+        font-size: 30px;
+      }
+      & h4{
+        color: $pink;
+        font-size: 20px;
+        font-family: $sansSerif;
+        @include martopbot(20px, 20px);
+      }
+      & a{
+        color: $blue-light;
+      }
   }
-  h1, h2, h3{
-    font-family: $serif;
-    text-align: center;
-    font-weight: 400;
-  }
-  h1{
-    font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 20px;
-    & span.ampersan{
-     color: $pink;
-    }
-  }
-  h3{
-    font-size: 30px;
-  }
-  h4{
-    color: $pink;
-    font-size: 20px;
-    font-family: $sansSerif;
-    @include martopbot(20px, 20px);
-  }
-  a{
-    color: $blue-light;
-  }
+
   .contentWrapper{
     max-width: 1029px;
     display: block;
@@ -86,6 +86,10 @@
     display: block;
     text-align: center;
   }
+  .floatRight{
+    float: right;
+  }
+
 
 // Sections
   .content{
@@ -93,45 +97,153 @@
     padding: 20px;
   }
 
-  .nav{
-    margin-left: -20px;
-    position: fixed;
-    bottom: 0px;
-    background: $grey-medium;
-    @include padtopbot(10px, 0px);
-    width: 100%;
-    z-index: 100;
-    &_block{
-      &-links{
-        display: none;
-      }//-links
-    }//_block
-  } // nav
-
   img.headline{
     border: solid 5px $grey-medium;
     @include martopbot(30px, 30px);
+      width: 95%;
+      max-width: 900px;
   }
 
   .details{
     border: solid 2px $grey-border;
     background: $white;
+    max-width: 880px;
+    margin: 0 auto;
+    @include martopbot(45px, 40px);
     padding: 20px;
-    @include martopbot(30px, 30px);
+    & a{
+      font-weight: bold;
+    }
     & p{
       color: $black;
-      padding-bottom: 20px;
+      @include martopbot(20px, 20px);
+    }
+    & h4{
+      margin-bottom: 0px;
     }
     & .header{
-
+      margin-top: -45px;
     }
     &_story{
       border-bottom: 2px solid $grey-border;
       margin-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     &_wedding{
       border-bottom: 2px solid $grey-border;
       margin-bottom: 20px;
+       padding-left: 10px;
+      padding-right: 10px;
+      &-bottomimg{
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+      }
     }
-    &_hotel{}
+    &_hotel{
+      padding-left: 10px;
+      padding-right: 10px;
+      & p.details_hotel-header{
+        font-weight: bold;
+        margin-bottom: -20px;
+      }
+      & p.floatRight-higher{
+        margin-top: 0px;
+      }
+    }
+  } // .details
+
+
+.registry{
+  &_icons{
+    @include martopbot(40px, 40px);
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: auto auto;
+    &-links{
+      border-radius: 50%;
+      border: solid 7px $grey-border;
+      @extend %ease;
+      max-width: 150px;
+      &:hover{
+        @extend %ease;
+        border: solid 7px $pink;
+        border-bottom: solid 7px darken($pink, 10%);
+      }
+      &:active{
+        @extend %ease;
+        border: solid 7px $pink;
+        border-bottom: solid 7px darken($pink, 10%);
+      }
+    }
   }
+}// registry
+
+.contact{
+    background: $grey-medium;
+    @include padtopbot(40px, 40px);
+    &_form{
+      @include padtopbot(40px, 40px);
+      max-width: 900px;
+      & input, textarea{
+        font-size: 17px;
+        padding: 20px;
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 400px;
+        margin-top: 40px;
+        font-family: $sansSerif;
+        @extend %ease;
+        &:focus{
+          @extend %ease;
+          outline: solid 2px $pink;
+        }
+      }
+      & input{
+        &:first-of-type{
+          margin-top: 0px;
+        }
+      }
+      &-submit{
+        background: $pink;
+        color: $white;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px 25px 10px 25px;
+        border-radius: 10px;
+        @include martopbot(40px, 20px);
+        @extend %ease;
+        cursor: pointer;
+        &:hover{
+          @extend %ease;
+          border-bottom: 2px solid $blue-navy;
+        }
+      }
+    }
+    & p.toTop{
+      display: none;
+      color: $blue-light;
+      cursor: pointer;
+      text-decoration: underline;
+      text-align: center;
+    }
+}// .contact
+
+p.success{
+  background: #6fdb7c;
+  padding: 10px;
+  color: $black;
+  display: none;
+  margin-bottom: 10px;
+}
+p.fail{
+  background: #d86e6e;
+  padding: 10px;
+  color: $black;
+  display: none;
+  margin-bottom: 10px;
+}
